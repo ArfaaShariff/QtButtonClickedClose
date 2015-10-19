@@ -6,7 +6,13 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    QDir mDir("C:/QtProjects") ;
+    QDir mDir ;
+
+    foreach(QFileInfo mItm, mDir.drives())
+    {
+        qDebug() << mItm.absoluteFilePath();
+    }
+
     qDebug()<<mDir.exists();
     MainWindow w;
     w.show();
