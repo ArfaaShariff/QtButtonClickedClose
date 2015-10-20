@@ -7,7 +7,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    setCentralWidget(ui->plainTextEdit);
+//    setCentralWidget(ui->plainTextEdit);
     ui->pushButton->setText("Close");
 
     connect(ui->horizontalSlider,SIGNAL(valueChanged(int)),
